@@ -1,0 +1,19 @@
+@import './fonts', './_variables', './_header', './_main', './_footer';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Inter';
+	height: 100vh;
+	background-color: cadetblue;
+}
+
+img {
+	display: block;
+}

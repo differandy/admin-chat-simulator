@@ -1,0 +1,47 @@
+@import './_variables';
+
+.header {
+	width: 100%;
+	height: 4rem;
+	padding: 60px 40px;
+	display: flex;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 1px rgba(1, 1, 1, 0.3);
+	color: #ffffff;
+
+	&__logo {
+		width: 100px;
+		height: 100px;
+		fill: #fae9e9;
+		transition: ease 0.2s;
+	}
+
+	&__logo:hover {
+		transform: scale(1.1);
+		transition: ease 0.2s;
+		fill: #edb3c2;
+	}
+}
+
+.navigation {
+	margin-left: auto;
+
+	&__list {
+		display: flex;
+		gap: 3rem;
+	}
+
+	&__list-item {
+		font-size: 1.7rem;
+		font-weight: 700;
+		list-style-type: none;
+		cursor: pointer;
+		transition: linear 0.2s;
+
+		&:hover {
+			color: #edb3c2;
+			transition: linear 0.2s;
+		}
+	}
+}

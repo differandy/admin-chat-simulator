@@ -1,0 +1,98 @@
+.chat-window {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	border: 1px solid rgba(1, 1, 1, 0.2);
+	background-color: rgba(1, 1, 1, 0.1);
+	border-radius: 10px;
+}
+
+.chat-message {
+	width: 100%;
+	padding: 10px;
+	position: absolute;
+	display: flex;
+	gap: 0.3rem;
+	bottom: 0;
+
+	input[type='text'] {
+		width: 100%;
+		font-family: inherit;
+		font-size: 1.5rem;
+		border: none;
+		padding: 10px;
+		outline: none;
+		border-radius: 5px;
+	}
+
+	input[type='text']:focus {
+		outline: 3px solid rgba(1, 1, 1, 0.5);
+	}
+
+	.send-button {
+		width: 50px;
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+	}
+
+	.send {
+		width: 40px;
+		height: 40px;
+		fill: rgba(1, 1, 1, 0.4);
+
+		&:hover {
+			fill: #edb3c2;
+		}
+	}
+}
+
+.chat-view {
+	width: 780px;
+	height: 85%;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	padding: 5px;
+	border-radius: 5px;
+	border: 3px solid rgba(95, 158, 160, 0.7);
+	background-color: rgba(255, 255, 255, 0.9);
+
+	&__list {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		font-size: 1.5rem;
+		overflow: auto;
+	}
+
+	&__list::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&__list::-webkit-scrollbar-track {
+		background-color: rgba(95, 158, 160, 0.3);
+		border-radius: 20px;
+	}
+
+	&__list::-webkit-scrollbar-thumb {
+		background-color: rgba(95, 158, 160, 0.7);
+		border-radius: 20px;
+
+		&:hover {
+			background-color: rgba(95, 158, 160, 1);
+			cursor: pointer;
+		}
+	}
+
+	.username {
+		cursor: pointer;
+		font-weight: 600;
+
+		&:hover {
+			color: #edb3c2;
+		}
+	}
+}
