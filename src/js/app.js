@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		input.value = '';
 	};
 
-	sendMsgButton.addEventListener('click', e => {
+	sendMsgButton.addEventListener('click', () => {
 		let chatTextMsg = input.value;
 
 		if (chatTextMsg) {
@@ -32,9 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		} else {
 			return;
 		}
-		clearInputArea();
 
-		console.log(chatTextMsg);
+		clearInputArea();
 	});
 
 	input.addEventListener('keypress', e => {
