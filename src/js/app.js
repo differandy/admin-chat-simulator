@@ -24,11 +24,26 @@ document.addEventListener('DOMContentLoaded', () => {
 		input.value = '';
 	};
 
+	const divideString = input => {
+		let res = '';
+
+		if (input.length > 45) {
+			res = `${input.substring(0, 46)}\n${input.substring(46, input.length)}`;
+		} else {
+			res = input;
+		}
+
+		return res;
+	};
+
 	sendMsgButton.addEventListener('click', () => {
 		let chatTextMsg = input.value;
 
 		if (chatTextMsg) {
-			chatViewList.insertAdjacentHTML('beforeend', createLiItem(chatTextMsg));
+			chatViewList.insertAdjacentHTML(
+				'beforeend',
+				createLiItem(divideString(chatTextMsg))
+			);
 		} else {
 			return;
 		}
@@ -40,7 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		let key = e.key;
 
 		if (key === 'Enter' && input.value) {
-			chatViewList.insertAdjacentHTML('beforeend', createLiItem(input.value));
+			chatViewList.insertAdjacentHTML(
+				'beforeend',
+				createLiItem(divideString(input.value))
+			);
 			clearInputArea();
 		} else {
 			return;
